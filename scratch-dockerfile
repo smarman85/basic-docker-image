@@ -1,0 +1,8 @@
+FROM scratch
+
+ENV LANG=C.UTF-8
+
+ADD alpine-minirootfs-3.7.0-x86_64.tar.gz /
+
+RUN apk add --no-cache tzdata bash
+CMD ["/bin/bash"]
